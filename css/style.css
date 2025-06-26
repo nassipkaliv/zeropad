@@ -167,3 +167,87 @@ img {
   opacity: 0.5;
   text-align: center;
 }
+
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 16px;
+}
+
+.work-card {
+  position: relative;
+  width: 280px;
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  box-sizing: border-box;
+}
+
+.work-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.10) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.work-img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.work-card-title {
+  font-family: var(--third-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.work-card-subtitle {
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.wallet-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.wallet-btn {
+  background: #c5f604;
+  border-radius: 54px;
+  padding: 9px 25px;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 16px;
+  color: #28330b;
+  cursor: pointer;
+}
