@@ -713,3 +713,74 @@ img {
   opacity: 0.25 !important;
   margin-bottom: 0;
 }
+
+.header {
+  border-radius: 20px;
+  padding: 12px 20px;
+  background: #230cf2;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-link {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header-link:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.header-link.active {
+  border-bottom: 1px solid #fff;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.money-amount {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.money-amount span {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 12px;
+  padding: 6px 14px 6px 6px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.user-account span {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
