@@ -990,3 +990,30 @@ img {
   text-align: center;
   color: #fff;
 }
+
+.launchpad .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  position: relative;
+}
+
+.comming-soon {
+  border-radius: 20px;
+  padding: 16px 30px;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+}
+
+
+.nyancat {
+  bottom: 0%;
+  left: 27%;
+  position: absolute;
+}
