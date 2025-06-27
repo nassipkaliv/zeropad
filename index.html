@@ -25,7 +25,7 @@
       </div>
       <div class="header-right">
         <div class="header-btn">
-          <button class="main-btn header-btn">Connect wallet</button>
+          <button class="main-btn header-btn open-modal">Connect wallet</button>
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="wallet-btn-container">
-        <button class="main-btn">Connect wallet</button>
+        <button class="main-btn open-modal">Connect wallet</button>
       </div>
     </div>
   </section>
@@ -213,7 +213,7 @@
         A bonding curve is a pricing model where each mint makes the next one more expensive.<br> It rewards early users and builds hype — no fixed supply needed. Demand sets the value.
       </div>
       <div class="wallet-btn-container">
-        <button class="main-btn">Connect wallet</button>
+        <button class="main-btn open-modal">Connect wallet</button>
       </div>
     </div>
   </section>
@@ -277,7 +277,7 @@
             <br>It rewards early users and builds hype — no fixed supply needed. Demand sets the value.
           </p>
           <div class="wallet-btn-container">
-            <button class="main-btn">Connect wallet</button>
+            <button class="main-btn open-modal">Connect wallet</button>
           </div>
         </div>
       </div>
@@ -333,6 +333,33 @@
       </div>
     </div>
   </footer>
+
+  <div class="custom-modal-overlay" id="subscribeModal">
+    <div class="custom-modal">
+      <div class="modal-header">
+        <h1 class="modal-title">Subscribe to us</h1>
+        <button class="close-modal">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8.5L8 16.5M16 16.5L8 8.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-text">In order to connect your wallet, you need to subscribe to us on Twitter.</div>
+        <div class="modal-input">
+          <div class="modal-input-svg">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.012 7.95215L6.85341 7.95215C5.67376 7.95215 4.53204 8.4155 3.69479 9.26515C2.85754 10.1148 2.38187 11.254 2.40095 12.4705C2.38182 13.6871 2.85768 14.8264 3.69479 15.6759C4.551 16.5448 5.65461 17.0083 6.83431 17.0083H9.99289M13.9888 17.0469H17.1474C18.327 17.0469 19.4687 16.5835 20.306 15.7339C21.1432 14.8842 21.6189 13.745 21.5998 12.5285C21.5998 11.3314 21.1241 10.1921 20.2869 9.34249C19.4497 8.49285 18.3271 8.01013 17.1474 8.01011H13.9888M7.25283 12.4573L16.7286 12.4573" stroke="#248DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <input type="url" placeholder="Your Twitter profile link">
+        </div>
+        <button class="modal-btn main-btn">Subscribe to Twitter</button>
+        <button class="modal-btn main-btn outline-btn mb-0">I'm subscribed</button>
+      </div>
+    </div>
+  </div>
+
 
   <script src="js/app.js"></script>
 

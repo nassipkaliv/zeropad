@@ -9,3 +9,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const openButtons = document.querySelectorAll(".main-btn.open-modal");
+    const modal = document.getElementById("subscribeModal");
+    const closeButtons = document.querySelectorAll(".close-modal");
+
+    openButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        modal.classList.add("show");
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+    });
+
+    // Закрытие при клике вне окна
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+  });
