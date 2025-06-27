@@ -7,6 +7,12 @@
 }
 
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Brenzo Slab Personal Use';
     src: url('../assets/fonts/BrenzoSlabPersonalUse-Regular.woff2') format('woff2'),
@@ -1676,4 +1682,26 @@ img {
   right: 0;
   top: 0;
   height: 62.4px;
+}
+
+.header-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  color: #fff;
+}
+
+.index-header {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+.index-header.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
