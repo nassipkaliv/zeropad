@@ -560,7 +560,7 @@ img {
 .whyus-card {
   border-radius: 16px;
   padding: 15px;
-  width: 106px;
+  width: 140px;
   background: rgba(255, 255, 255, 0.05);
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2232,6 +2232,14 @@ backdrop-filter: blur(10px);
 
   .exchange {
     padding-bottom: 70px;
+  }
+
+  .whyus-container {
+    display: none;
+  }
+
+  .mem {
+    width: 25%;
   }
 
 }
