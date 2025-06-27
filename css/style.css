@@ -1790,6 +1790,7 @@ img {
   position: relative;
   display: flex;
   gap: 7px;
+  align-items: center;
 }
 
 .modal-input input {
@@ -1976,4 +1977,36 @@ backdrop-filter: blur(10px);
   justify-content: space-between;
   padding: 10px 16px 10px 10px;
   border-radius: 12px;
+}
+
+.withdrawal-input {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 10px 10px 10px 14px;
+}
+
+.withdrawal-input2 {
+  justify-content: space-between;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.withdrawal-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.withdrawal-select {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #1696ff;
+  text-decoration: none;
 }
