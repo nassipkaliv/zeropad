@@ -671,6 +671,10 @@ img {
   left: 19%;
 }
 
+.whyus-container-mobile {
+  display: none;
+}
+
 .mt-2 {
   margin-top: 12px !important;
 }
@@ -2240,6 +2244,40 @@ backdrop-filter: blur(10px);
 
   .mem {
     width: 25%;
+  }
+
+  .whyus-container-mobile {
+    display: block;
+    padding-bottom: 120px;
+  }
+
+  .whyus {
+    margin-top: 60px;
+  }
+
+  .whyus-content {
+    bottom: 0;
+  }
+
+  .whyus-grid {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    position: relative;
+  }
+
+  .whyus-card {
+    transform: none !important;
+    position: static;
+    width: 50%;
+  }
+
+  .whyus-img1, .whyus-img2, .whyus-img3, .whyus-img4, .whyus-img5 {
+    position: static;
   }
 
 }
