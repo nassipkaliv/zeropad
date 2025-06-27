@@ -78,3 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleOffcanvas() {
   document.getElementById('offcanvasMenu').classList.toggle('show');
 }
+
+
+  const swiper = new Swiper('.crypto-swiper', {
+    slidesPerView: 1.8,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });

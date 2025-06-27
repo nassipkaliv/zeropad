@@ -2026,6 +2026,16 @@ backdrop-filter: blur(10px);
   display: none;
 }
 
+.ref-copy-btns {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.crypto-swiper {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .divider-text {
     font-size: 12px;
@@ -2115,6 +2125,115 @@ backdrop-filter: blur(10px);
     gap: 30px;
   }
 
+  .homer2 {
+    width: 15%;
+  }
+
+  .network-title {
+    font-size: 18px;
+  }
+
+  .off-chain-text {
+    font-size: 12px;
+  }
+
+  .new-footer-text {
+    font-size: 12px;
+  }
+
+  .footer-social {
+    gap: 15px;
+  }
+
+  .refferals-container {
+    font-size: 20px;
+  }
+
+  .ref-content {
+    flex-direction: column-reverse;
+  }
+
+  .frog {
+    height: 100%;
+  }
+
+  .bean2 {
+    height: 100%;
+  }
+
+  .copy-text {
+    font-size: 12px;
+  }
+
+  .invite-card {
+    width: 100%;
+  }
+
+  .ref-copy-content {
+    flex-direction: column;
+  }
+
+  .ref-copy-btns {
+    justify-content: start;
+  }
+
+  .crypto-container {
+    display: none;
+  }
+
+  .crypto-swiper {
+    display: flex;
+  }
+
+  .exchange-container {
+    flex-direction: column;
+  }
+
+  .withdrawal-btn {
+    margin-top: 20px;
+  }
+
+  .table-header-text, .table-td-text {
+    font-size: 12px;
+  }
+
+  .table-td-status {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  .stat-title {
+    font-size: 18px;
+  }
+
+  .stat-text, .dep-text {
+    font-size: 12px;
+  }
+
+  .balance-text {
+    font-size: 14px;
+  }
+
+  .stat-subtitle {
+    font-size: 12px;
+  }
+
+  .exchange-block {
+    justify-content: space-between;
+  }
+
+  .dep-subtitle {
+    font-size: 12px;
+  }
+
+  .stat-info-text {
+    font-size: 12px;
+  }
+
+  .exchange {
+    padding-bottom: 70px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -2131,4 +2250,56 @@ backdrop-filter: blur(10px);
     flex-direction: column;
     gap: 10px;
   }
+
+  .network {
+    padding-bottom: 100px;
+  }
+
+  .refferals-container {
+    font-size: 12px;
+  }
+
+  .lvl-left {
+    gap: 10px;
+  }
+
+  .user-lvl {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .lvl-title {
+    font-size: 14px;
+  }
+
+  .lvl-subtitle {
+    font-size: 12px;
+  }
+
+  .lvl-amount {
+    font-size: 16px;
+  }
+
+  .lvl-members {
+    font-size: 12px;
+  }
+
+  .stat-container {
+    flex-direction: column;
+  }
+
+  .stat-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .table-header-text, .table-td-text {
+    font-size: 8px;
+  }
+
+  .table-td-status {
+    padding: 5px 4px;
+    font-size: 6px;
+  }
+
 }
