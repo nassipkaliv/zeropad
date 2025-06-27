@@ -75,3 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function toggleOffcanvas() {
+  document.getElementById('offcanvasMenu').classList.toggle('show');
+}

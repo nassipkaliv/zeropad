@@ -24,13 +24,13 @@
         </a>
       </div>
       <div class="header-center">
-        <a class="header-link" href="home.html">
+        <a class="header-link active" href="home.html">
           Home
         </a> 
         <a class="header-link" href="launchpad.html">
           Launchpad
         </a> 
-        <a class="header-link active" href="referrals.html">
+        <a class="header-link" href="referrals.html">
           Referrals
         </a> 
         <a class="header-link" href="exchange.html">
@@ -54,9 +54,43 @@
             </div>
             <span>Account</span>
         </div>
+        <div class="header-bar" onclick="toggleOffcanvas()">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+            style="fill:#FFFFFF;">
+            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(3.55556,3.55556)"><path d="M56,48c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,32c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0zM56,16c2.209,0 4,1.791 4,4c0,2.209 -1.791,4 -4,4c-1.202,0 -38.798,0 -40,0c-2.209,0 -4,-1.791 -4,-4c0,-2.209 1.791,-4 4,-4c1.202,0 38.798,0 40,0z"></path></g></g>
+          </svg>
+        </div>
       </div>
     </div>
   </header>
+
+  <div class="offcanvas" id="offcanvasMenu">
+    <button class="offcanvas-close" onclick="toggleOffcanvas()">×</button>
+    <div class="offcanvas-container">
+      <a class="header-link active" href="home.html">Home</a> 
+      <a class="header-link" href="launchpad.html">Launchpad</a> 
+      <a class="header-link" href="referrals.html">Referrals</a> 
+      <a class="header-link" href="exchange.html">Exchange</a> 
+
+      <div class="money-amount">
+        <div class="money-svg">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.54781 6.36364C7.19369 3.85421 9.47165 2 12.1827 2C15.396 2 18.0009 4.60489 18.0009 7.81818C18.0009 10.38 16.3451 12.5551 14.0454 13.3318M13.6359 12.1818C13.6359 15.3951 11.031 18 7.81769 18C4.6044 18 1.99951 15.3951 1.99951 12.1818C1.99951 8.96852 4.6044 6.36364 7.81769 6.36364C11.031 6.36364 13.6359 8.96852 13.6359 12.1818Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <span>123,042</span>
+      </div>
+      <div class="user-account">
+          <div class="user-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 13.5557C14.3722 13.5557 16.4711 14.0084 17.9395 14.6973C19.4872 15.4234 20 16.2289 20 16.7783C19.9998 17.4746 19.6205 18.2354 18.3896 18.877C17.1255 19.5358 15.0584 20 12 20C8.94161 20 6.87454 19.5358 5.61035 18.877C4.37952 18.2354 4.00016 17.4746 4 16.7783C4 16.2289 4.51284 15.4234 6.06055 14.6973C7.52885 14.0084 9.62782 13.5557 12 13.5557ZM12 4C13.484 4 14.8184 5.4463 14.8184 7.00977C14.8183 8.52535 13.5293 9.875 12 9.875C10.4707 9.875 9.1817 8.52535 9.18164 7.00977C9.18164 5.4463 10.516 4 12 4Z" stroke="white" stroke-width="2" />
+            </svg>
+          </div>
+          <span>Account</span>
+      </div>
+    </div>
+    
+  </div>
 
   <section class="referrals">
     <div class="container">

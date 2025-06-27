@@ -144,6 +144,10 @@ body {
   max-width: 1440px;
 }
 
+.header-bar {
+  display: none;
+}
+
 .intro-img {
   width: 100%;
   border-radius: 20px;
@@ -2018,6 +2022,10 @@ backdrop-filter: blur(10px);
   justify-content: center;
 }
 
+.offcanvas {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .divider-text {
     font-size: 12px;
@@ -2065,6 +2073,48 @@ backdrop-filter: blur(10px);
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .header-bar {
+    display: block;
+  }
+
+  .offcanvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #1A1442;
+    color: white;
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding: 20px;
+  }
+
+  .offcanvas.show {
+    right: 0;
+  }
+  .offcanvas-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .offcanvas-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
 }
 
 @media (max-width: 480px) {
