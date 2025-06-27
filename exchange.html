@@ -194,7 +194,7 @@
             </div>
           </div>
           <div class="withdrawal">
-            <button class="withdrawal-btn">Withdrawal</button>
+            <button class="withdrawal-btn" data-target="#withdrawalModal">Withdrawal</button>
           </div>
         </div>
       </div>
@@ -525,6 +525,65 @@
       </div>
     </div>
   </footer>
+
+  <div class="custom-modal-overlay" id="withdrawalModal">
+    <div class="custom-modal">
+      <div class="modal-header">
+        <h1 class="modal-title">Withdrawal</h1>
+        <button class="close-modal">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8.5L8 16.5M16 16.5L8 8.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body withdrawal-body">
+        <div class="modal-deposit-text modal-label">Choose a network</div>
+        <div class="dropdown-wrapper">
+            <button class="dropdown-toggle withdrawal-toggle" id="selectedToken">
+              <span class="dropdown-wrapper-span">TRC20</span>
+              <div>
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10.5L12.0008 15.08L17 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+            <ul class="dropdown-menu">
+              <li data-token="TRC20">
+                <span class="dropdown-wrapper-span">TRC20</span>
+              </li>
+              <li data-token="TRC20">
+                <span class="dropdown-wrapper-span">TRC20</span>
+              </li>
+              <li data-token="TRC20">
+                <span class="dropdown-wrapper-span">TRC20</span>
+              </li>
+            </ul>
+        </div>
+        <div class="modal-deposit-container">
+          <div class="modal-deposit-text">Available: 1.947 ETH</div>
+        </div>
+        <button class="modal-btn main-btn mb-0">Withdrawal</button>
+        <div class="withdrawal-lock">
+          <div class="withdrawal-title">
+            <div>
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 11.8244L11 7.71261M11 14.8721V14.9082M16.1974 18.3327H5.80256C4.38268 18.3327 3.18443 17.3943 2.80743 16.1104C2.6465 15.5624 2.84424 14.9915 3.1467 14.5055L8.34413 5.13362C9.56184 3.17681 12.4382 3.17681 13.6559 5.13362L18.8533 14.5055C19.1558 14.9915 19.3535 15.5624 19.1926 16.1104C18.8156 17.3943 17.6173 18.3327 16.1974 18.3327Z" stroke="#F6EE04" stroke-width="1.83333" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            Withdrawal Lock Period
+          </div>
+          <div class="withdrawal-text">
+            Next Withdrawal: July 18, 2025
+          </div>
+          <div class="withdrawal-text">
+            Lock Duration: 30 Days
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>

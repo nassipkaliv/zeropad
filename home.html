@@ -75,7 +75,7 @@
           <div class="network-title">Deposit System</div>
           <div class="network-text">Get points for making a deposit <br> on the platform.</div>
           <div class="system-container">
-            <button class="deposit-btn">Deposit System</button>
+            <button class="deposit-btn" data-target="#depositModal">Deposit System</button>
           </div>
         </div>
         <div class="point-card point-card2">
@@ -140,6 +140,88 @@
       </div>
     </div>
   </footer>
+
+
+  <div class="custom-modal-overlay" id="depositModal">
+    <div class="custom-modal">
+      <div class="modal-header">
+        <h1 class="modal-title">Deposit</h1>
+        <button class="close-modal">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8.5L8 16.5M16 16.5L8 8.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-input drop-input mb-0">
+          <div class="modal-input-amount">1.000 ETH</div>
+          <div class="dropdown-wrapper">
+            <button class="dropdown-toggle" id="selectedToken">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12.5" r="12" fill="#F6F6F6" />
+                <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434" />
+                <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C" />
+                <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B" />
+                <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C" />
+                <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414" />
+                <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939" />
+              </svg>
+              <span class="dropdown-wrapper-span">ETH</span>
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10.5L12.0008 15.08L17 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li data-token="ETH">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6" />
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434" />
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C" />
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B" />
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C" />
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414" />
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939" />
+                </svg>
+                <span class="dropdown-wrapper-span">ETH</span>
+              </li>
+              <li data-token="BTC">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6" />
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434" />
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C" />
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B" />
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C" />
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414" />
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939" />
+                </svg>
+                <span class="dropdown-wrapper-span">BTC</span>
+              </li>
+              <li data-token="LTC">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6" />
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434" />
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C" />
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B" />
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C" />
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414" />
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939" />
+                </svg>
+                <span class="dropdown-wrapper-span">LTC</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-deposit-container">
+          <div class="modal-deposit-text">You will receive:</div>
+          <div class="modal-deposit-text yellow-text op-1">1.900.000 PTC</div>
+        </div>
+        <button class="modal-btn main-btn mb-0">Make a deposit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+
 
 </body>
 </html>

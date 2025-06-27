@@ -1819,3 +1819,161 @@ img {
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
 }
+
+.modal-deposit-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-bottom: 30px;
+}
+
+.modal-deposit-text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.op-1 {
+  opacity: 1;
+}
+
+.modal-input-amount {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  border: 0;
+}
+
+.dropdown-wrapper-span {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.dropdown-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  margin-left: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #261f5a;
+  border-radius: 10px;
+  margin-top: 8px;
+  list-style: none;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 120px;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background-color: #342a6a;
+}
+
+.drop-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.withdrawal-lock {
+  border-radius: 16px;
+  padding: 12px 15px;
+  width: 100%;
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+  margin-top: 30px;
+}
+
+.withdrawal-lock::before {
+    content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(246, 238, 4, 0.10) 0%,
+    rgba(246, 238, 4, 0.03) 50%,
+    rgba(246, 238, 4, 0.15) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.withdrawal-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #f6ee04;
+}
+
+.withdrawal-text {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.modal-label {
+  margin-bottom: 8px;
+}
+
+.withdrawal-body {
+  margin-top: 25px;
+}
+
+.withdrawal-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px 10px 10px;
+  border-radius: 12px;
+}
