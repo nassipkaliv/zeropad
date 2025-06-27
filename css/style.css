@@ -141,6 +141,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 20px;
+  max-width: 1440px;
 }
 
 .intro-img {
@@ -2012,6 +2013,11 @@ backdrop-filter: blur(10px);
   text-decoration: none;
 }
 
+.intro .container {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   .divider-text {
     font-size: 12px;
@@ -2036,6 +2042,28 @@ backdrop-filter: blur(10px);
 
   .main-btn {
     font-size: 12px;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .header-right .money-amount {
+    display: none;
+  }
+
+  .header-right .user-account {
+    display: none;
+  }
+
+  .point-container {
+    flex-direction: column;
+  }
+
+  .network .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
