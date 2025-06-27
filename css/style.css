@@ -795,6 +795,7 @@ img {
   padding-top: 55px;
   position: relative;
   padding-bottom: 75px;
+  min-height: 90vh;
 }
 
 .network .container {
@@ -2009,4 +2010,47 @@ backdrop-filter: blur(10px);
   font-size: 16px;
   color: #1696ff;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .divider-text {
+    font-size: 12px;
+  }
+
+  .holders-container {
+    flex-direction: column;
+  }
+
+  .holders-card {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .trade-container span {
+    font-size: 11px;
+  }
+
+  .whyus-card-title {
+    font-size: 10px;
+  }
+
+  .main-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-btn {
+    padding: 8px;
+  }
+
+  .divider-text {
+    font-size: 8px;
+  }
+
+  .invite-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
