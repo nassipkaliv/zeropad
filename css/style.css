@@ -1663,3 +1663,17 @@ img {
   border: 1px solid #fff;
   opacity: 0.2;
 }
+
+.frog {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 62.4px;
+}
+
+.bean2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 62.4px;
+}
