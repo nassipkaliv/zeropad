@@ -2222,6 +2222,7 @@ backdrop-filter: blur(10px);
     font-size: 12px;
   }
 
+
   .exchange-block {
     justify-content: space-between;
   }
@@ -2249,6 +2250,7 @@ backdrop-filter: blur(10px);
   .whyus-container-mobile {
     display: block;
     padding-bottom: 120px;
+    max-width: 400px;
   }
 
   .whyus {
@@ -2259,30 +2261,92 @@ backdrop-filter: blur(10px);
     bottom: 0;
   }
 
-  .whyus-grid {
-    margin-top: 24px;
+  .whyus-container-mobile-top {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
     align-items: center;
-    max-width: 600px;
+    justify-content: center;
+  }
+
+  .whyus-container-mobile-top-svg {
     position: relative;
   }
 
-  .whyus-card {
-    transform: none !important;
-    position: static;
-    width: 50%;
+  .whyus-card3 {
+    position: absolute;
+    transform: rotate(347deg);
+    top: -4%;
+    left: -4%;
+    width: 130px;
   }
 
-  .whyus-img1, .whyus-img2, .whyus-img3, .whyus-img4, .whyus-img5 {
-    position: static;
+  .whyus-img1 {
+    width: 47px;
+    height: 47px;
+    top: 21%;
+    left: 34%;
+  }
+
+  .whyus-img2, .whyus-img3, .whyus-img4, .whyus-img5 {
+    width: 47px;
+    height: 47px;
+  }
+
+  .whyus-card1 {
+    transform: rotate(4deg);
+    top: -3%;
+    left: 59%;
+    width: 115px;
+  }
+
+  .whyus-img3 {
+    top: -14%;
+    left: 0%;
+    transform: rotate(329deg);
+  }
+
+  .whyus-card2 {
+    top: 6%;
+    left: 32.5%;
+    transform: rotate(-11deg);
+    width: 110px;
+    padding: 8px;
+  }
+
+  .whyus-img2 {
+    top: -1%;
+    left: 79%;
+  }
+
+  .whyus-card5 {
+    top: 52%;
+    left: 64%;
+    transform: rotate(30deg);
+    width: 110px;
+  }
+
+  .whyus-img4 {
+    top: 70%;
+    left: 41.9%;
+    transform: rotate(351deg);
   }
 
 }
 
 @media (max-width: 480px) {
+
+  .whyus-container-mobile {
+    padding-bottom: 60px;
+  }
+
+  .mem {
+    width: 40%;
+  }
+
+  .whyus-card {
+    padding: 8px;
+  }
+
   .main-btn {
     padding: 8px;
   }
@@ -2348,4 +2412,31 @@ backdrop-filter: blur(10px);
     font-size: 6px;
   }
 
+}
+
+@media (max-width: 400px) {
+    .whyus-container-mobile-top-svg {
+    position: relative;
+    left: 5%;
+  }
+
+  .whyus-card3 {
+    position: absolute;
+    transform: rotate(347deg);
+    top: -4%;
+    left: -4%;
+    width: 115px;
+  }
+
+
+  .whyus-img1 {
+    left: 36%;
+  }
+
+  .whyus-card1 {
+    transform: rotate(4deg);
+    top: 5%;
+    left: 62%;
+    width: 115px;
+  }
 }
