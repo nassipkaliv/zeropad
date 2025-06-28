@@ -1446,6 +1446,18 @@ img {
   font-weight: 400;
   font-size: 16px;
   color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-block {
+  min-width: 700px; /* или больше, если нужно */
 }
 
 .copy-block {
@@ -2414,14 +2426,7 @@ backdrop-filter: blur(10px);
     gap: 20px;
   }
 
-  .table-header-text, .table-td-text {
-    font-size: 8px;
-  }
 
-  .table-td-status {
-    padding: 5px 4px;
-    font-size: 6px;
-  }
 
 }
 

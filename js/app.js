@@ -89,3 +89,11 @@ function toggleOffcanvas() {
       prevEl: '.swiper-button-prev',
     },
   });
+
+    const swiper2 = new Swiper('.mobile-table-swiper', {
+    slidesPerView: 'auto',
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
