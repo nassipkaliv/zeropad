@@ -1457,7 +1457,14 @@ img {
 }
 
 .table-block {
-  min-width: 700px; /* или больше, если нужно */
+  min-width: 700px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.table-scroll-wrapper {
+  scrollbar-width: none;
 }
 
 .copy-block {
