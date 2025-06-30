@@ -134,12 +134,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.index-body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 footer {
   position: relative;
@@ -1833,6 +1831,7 @@ img {
   top: 0;
   width: 100%;
   z-index: 1000;
+  max-width: 1200px;
 }
 
 .index-header.visible {
