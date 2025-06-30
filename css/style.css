@@ -281,6 +281,25 @@ img {
   cursor: pointer;
 }
 
+.main-btn {
+  background: #c5f604;
+  border-radius: 54px;
+  padding: 9px 25px;
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 16px;
+  color: #28330b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+  background: #b3e303; 
+  transform: scale(1.03); 
+  box-shadow: 0 4px 12px rgba(197, 246, 4, 0.4);
+}
+
+
 .divider1 {
   padding: 8px 7px;
   width: 100%;
@@ -966,11 +985,25 @@ img {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.deposit-btn:hover {
+  background: rgba(36, 141, 255, 0.2);
+  transform: scale(1.05);
+}
+
 
 .referral-btn {
   background: rgba(197, 246, 4, 0.1);
+  transition: all 0.3s ease;
 }
+
+.referral-btn:hover {
+  background: rgba(197, 246, 4, 0.2);
+  transform: scale(1.05);
+}
+
 
 .off-chain-container {
   margin-top: 60px;
@@ -1561,7 +1594,14 @@ img {
   border: 0;
   cursor: pointer;
   padding: 11px 25px;
+  transition: all 0.3s ease;
 }
+
+.withdrawal-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.03);
+}
+
 
 .table-header {
   display: flex;
@@ -1731,11 +1771,22 @@ img {
   height: 62.4px;
 }
 
+
 .header-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 0;
   color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 54px;
 }
+
+.header-btn:hover {
+  background: rgba(255, 255, 255, 0.2); 
+  transform: scale(1.05); 
+  border: 0;
+}
+
 
 .index-header {
   transform: translateY(-100%);
@@ -1866,7 +1917,15 @@ img {
 .outline-btn {
   background: rgba(255, 255, 255, 0.05);
   color: #fff;
+  transition: all 0.3s ease;
 }
+
+.outline-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  box-shadow: none !important;
+}
+
 
 .modal-deposit-container {
   display: flex;
