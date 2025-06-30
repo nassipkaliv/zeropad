@@ -155,6 +155,12 @@ footer {
   max-width: 1440px;
 }
 
+.main-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .header-bar {
   display: none;
 }
@@ -990,7 +996,7 @@ img {
 
 .homer2 {
   position: absolute;
-  bottom: 0%;
+  bottom: 100%;
   left: 5%;
 }
 
@@ -998,6 +1004,7 @@ img {
   border-radius: 20px;
   padding: 10px 20px;
   background: #230cf2;
+  position: relative;
 }
 
 .new-footer-container {
@@ -1044,7 +1051,7 @@ img {
 
 
 .nyancat {
-  bottom: 0%;
+  bottom: 100%;
   left: 27%;
   position: absolute;
 }
