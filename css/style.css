@@ -134,7 +134,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -200,12 +200,30 @@ img {
 }
 
 .work-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin-top: 16px;
 }
+
+@media (max-width: 1200px) {
+  .work-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .work-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .work-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .work-card {
   position: relative;
@@ -1798,7 +1816,7 @@ img {
   top: 0;
   width: 100%;
   z-index: 1000;
-  max-width: 1440px;
+  max-width: 1200px;
 }
 
 .index-header.visible {
