@@ -134,6 +134,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.index-body {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -158,9 +161,10 @@ footer {
 }
 
 .main-container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
 }
 
 .header-bar {
@@ -178,8 +182,10 @@ img {
 }
 
 .work {
+  margin: 0 auto;
   margin-top: 25px;
 }
+
 
 .title {
   font-family: 'Square721TL-BoldExtended';
@@ -204,6 +210,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin-top: 16px;
+  
 }
 
 @media (max-width: 1200px) {
@@ -361,8 +368,8 @@ img {
 .homer {
   position: absolute;
   width: 180px;
-  right: 10%;
-    bottom: -50%;
+  right: 61%;
+  bottom: -50%;
 }
 
 .title-h2 {
@@ -401,7 +408,6 @@ img {
   background: rgba(255, 255, 255, 0.05);
   display: flex;
   gap: 14px;
-  width: 240px;
 }
 
 .invite-card1 svg {
@@ -599,7 +605,9 @@ img {
 }
 
 .whyus {
+  margin: 0 auto;
   margin-top: 110px;
+  max-width: 1200px;
 }
 
 .whyus .container {
@@ -742,7 +750,7 @@ img {
 
 .mem {
   position: absolute;
-  left: 0%;
+  left: -17%;
   bottom: 0%;
 }
 
@@ -870,6 +878,7 @@ img {
   margin: 0 auto;
   max-width: 720px;
   padding: 0;
+
 }
 
 .network-content {
@@ -1049,8 +1058,9 @@ img {
 
 .homer2 {
   position: absolute;
-  bottom: 100%;
-  left: 5%;
+  bottom: 0%;
+  left: 10%;
+  width: 102px;
 }
 
 .new-footer {
@@ -1111,7 +1121,6 @@ img {
 
 .referrals {
   padding: 20px 0 110px 0;
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .refferals-container {
