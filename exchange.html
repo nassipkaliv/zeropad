@@ -258,36 +258,29 @@
       </div>
       <div class="exchange-container">
         <div class="ref-levels-container exchange-block">
-          <h1 class="ref-levels-title">Deposit funds</h1>
-          <div class="dep-block">
-            <div class="dep-subtitle">Selected network</div>
-            <div class="dep-container">
-              <div class="dep-svg">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.0115 7.45215L6.85292 7.45215C5.67327 7.45215 4.53155 7.9155 3.6943 8.76515C2.85705 9.61479 2.38138 10.754 2.40046 11.9705C2.38133 13.1871 2.85719 14.3264 3.6943 15.1759C4.55051 16.0448 5.65413 16.5083 6.83382 16.5083H9.9924M13.9883 16.5469H17.1469C18.3265 16.5469 19.4683 16.0835 20.3055 15.2339C21.1428 14.3842 21.6184 13.245 21.5993 12.0285C21.5993 10.8314 21.1237 9.69214 20.2864 8.84249C19.4492 7.99285 18.3266 7.51013 17.1469 7.51011H13.9883M7.25235 11.9573L16.7281 11.9573" stroke="#248DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
-              <div class="dep-text">Ethereum</div>
-              <div class="dep-text">(ETH)</div>
-            </div>
+          <div class="ac-block">
+            <h1 class="ref-levels-title">Deposit funds</h1>
+            <button class="refresh-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.57787 15.9861C5.96782 18.3856 8.56573 20 11.5412 20C14.9149 20 17.8031 17.9247 18.9957 14.9826M7.0194 14.9826L3 14.9826L3 18.9965M18.4221 7.95833C17.0322 5.55882 14.4343 3.94445 11.4588 3.94445C8.08513 3.94445 5.19686 6.0198 4.00433 8.96181M15.9806 8.96181L20 8.96181L20 4.94792" stroke="#248DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
           </div>
-          <div class="dep-block">
-            <div class="dep-subtitle">Your Deposit Address</div>
-            <div class="dep-container copy-block">
-              <div class="dep-text">0x742d35Cc6635C0532925a3b8D4034DfcD25dB02</div>
-              <div class="svg-copy">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.5 13.1251L20.5 6.00003C20.5 4.34317 19.1568 3.00002 17.5 3.00003L10.375 3.00012M14.5 21.0001L7.75 21.0001C6.50736 21.0001 5.5 19.9928 5.5 18.7501L5.5 9.00012C5.5 7.75747 6.50736 6.75011 7.75 6.75011L14.5 6.75011C15.7426 6.75011 16.75 7.75747 16.75 9.00011L16.75 18.7501C16.75 19.9928 15.7426 21.0001 14.5 21.0001Z" stroke="#248DFF" stroke-width="2" stroke-linecap="round" />
-                </svg>
+          <div class="balance-container">
+            <div class="balance-block">
+              <div class="balance-subtitle">Total deposit</div>  
+              <div class="balance-text">0.10 ETH</div>
+            </div>
+            <div class="balance-block">
+              <div class="balance-subtitle">Total farm from deposit</div>  
+              <div class="balance-text">
+                2,847 PTS
+                <span>~ 0.14 ETH</span>
               </div>
             </div>
-            <div class="dep-subtitle mt-1">Send only THE to this address. Other tokens will be lost</div>
           </div>
-          <div class="dep-block mb-0">
-            <div class="dep-subtitle">Minimum Deposit</div>
-            <div class="dep-container">
-              <div class="dep-text">0.01 ETH</div>
-            </div>
+          <div class="withdrawal">
+            <button class="withdrawal-btn" data-target="#makeDepositModal">Make a deposit</button>
           </div>
         </div>
         <div class="ref-levels-container exchange-block">
@@ -308,22 +301,173 @@
               <div class="balance-subtitle">Total Points</div>  
               <div class="balance-text">2,847 PTS</div>
             </div>
-            <div class="balance-block">
-              <div class="balance-subtitle">Pending Deposits</div>  
-              <div class="balance-text">0.25 ETH</div>
-              <div class="balance-processing">Processing</div>
-            </div>
-            <div class="balance-block">
-              <div class="balance-subtitle">Pending Deposits</div>  
-              <div class="balance-text">0.25 ETH</div>
-              <div class="balance-lock">30 days lock</div>
-            </div>
           </div>
           <div class="withdrawal">
             <button class="withdrawal-btn" data-target="#withdrawalModal">Withdrawal</button>
           </div>
         </div>
       </div>
+
+      <h1 class="ref-levels-title">Transaction History</h1>
+      
+      <div class="table-scroll-wrapper">
+        <div class="ref-levels-container exchange-block table-block">
+          <div class="table-header">
+            <div class="table-header-text">Transaction</div>
+            <div class="table-header-text">Network</div>
+            <div class="table-header-text">Amount</div>
+            <div class="table-header-text">Points</div>
+            <div class="table-header-text">Status</div>
+            <div class="table-header-text">Date</div>
+          </div>
+          <div class="table-divider"></div>
+          <div class="table-row">
+            <div class="table-td">
+              <div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.375 12.8333L12 17M12 17L7.625 12.8333M12 17L12 7" stroke="#0BDF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="table-td-text">
+                Deposit
+              </div>
+            </div>
+            <div class="table-td">
+              <div>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12.2002" cy="12" r="12" fill="#F6F6F6" />
+                  <path d="M12.1999 4.28613L12.0938 4.63773L12.0938 14.8395L12.1999 14.9427L17.0549 12.1436L12.1999 4.28613Z" fill="#343434" />
+                  <path d="M12.1989 4.28613L7.34375 12.1436L12.1989 14.9427V9.99109V4.28613Z" fill="#8C8C8C" />
+                  <path d="M12.1999 15.8387L12.1401 15.9099V19.5439L12.1999 19.7142L17.0579 13.041L12.1999 15.8387Z" fill="#3C3C3B" />
+                  <path d="M12.1989 19.7142V15.8387L7.34375 13.041L12.1989 19.7142Z" fill="#8C8C8C" />
+                  <path d="M12.1978 14.9419L17.0528 12.1427L12.1978 9.99023V14.9419Z" fill="#141414" />
+                  <path d="M7.34375 12.1427L12.1989 14.9419V9.99023L7.34375 12.1427Z" fill="#393939" />
+                </svg>
+              </div>
+              <div class="table-td-text">
+                Ethereum
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text">
+                1.50 ETH
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text yellow-text">
+                +150 PTS
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-status confirm">
+                Confirmed
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text">
+                Dec 16, 2024
+              </div>
+            </div>
+          </div>
+          <div class="table-row">
+            <div class="table-td">
+              <div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.375 12.8333L12 17M12 17L7.625 12.8333M12 17L12 7" stroke="#0BDF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="table-td-text">
+                Deposit
+              </div>
+            </div>
+            <div class="table-td">
+              <div>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12.2002" cy="12" r="12" fill="#F6F6F6" />
+                  <path d="M12.1999 4.28613L12.0938 4.63773L12.0938 14.8395L12.1999 14.9427L17.0549 12.1436L12.1999 4.28613Z" fill="#343434" />
+                  <path d="M12.1989 4.28613L7.34375 12.1436L12.1989 14.9427V9.99109V4.28613Z" fill="#8C8C8C" />
+                  <path d="M12.1999 15.8387L12.1401 15.9099V19.5439L12.1999 19.7142L17.0579 13.041L12.1999 15.8387Z" fill="#3C3C3B" />
+                  <path d="M12.1989 19.7142V15.8387L7.34375 13.041L12.1989 19.7142Z" fill="#8C8C8C" />
+                  <path d="M12.1978 14.9419L17.0528 12.1427L12.1978 9.99023V14.9419Z" fill="#141414" />
+                  <path d="M7.34375 12.1427L12.1989 14.9419V9.99023L7.34375 12.1427Z" fill="#393939" />
+                </svg>
+              </div>
+              <div class="table-td-text">
+                Ethereum
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text">
+                1.00 ETH
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text yellow-text">
+                +100 PTS
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-status confirm">
+                Confirmed
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text">
+                Dec 15, 2024
+              </div>
+            </div>
+          </div>
+          <div class="table-row">
+            <div class="table-td">
+              <div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.375 12.8333L12 17M12 17L7.625 12.8333M12 17L12 7" stroke="#0BDF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="table-td-text">
+                Deposit
+              </div>
+            </div>
+            <div class="table-td">
+              <div>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12.2002" cy="12" r="12" fill="#F6F6F6" />
+                  <path d="M12.1999 4.28613L12.0938 4.63773L12.0938 14.8395L12.1999 14.9427L17.0549 12.1436L12.1999 4.28613Z" fill="#343434" />
+                  <path d="M12.1989 4.28613L7.34375 12.1436L12.1989 14.9427V9.99109V4.28613Z" fill="#8C8C8C" />
+                  <path d="M12.1999 15.8387L12.1401 15.9099V19.5439L12.1999 19.7142L17.0579 13.041L12.1999 15.8387Z" fill="#3C3C3B" />
+                  <path d="M12.1989 19.7142V15.8387L7.34375 13.041L12.1989 19.7142Z" fill="#8C8C8C" />
+                  <path d="M12.1978 14.9419L17.0528 12.1427L12.1978 9.99023V14.9419Z" fill="#141414" />
+                  <path d="M7.34375 12.1427L12.1989 14.9419V9.99023L7.34375 12.1427Z" fill="#393939" />
+                </svg>
+              </div>
+              <div class="table-td-text">
+                Ethereum
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text">
+                1.50 ETH
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text yellow-text">
+                +150 PTS
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-status processing">
+                Processing
+              </div>
+            </div>
+            <div class="table-td">
+              <div class="table-td-text">
+                Dec 16, 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h1 class="ref-levels-title">Platform Statistics</h1>
       
       <div class="table-scroll-wrapper">
@@ -740,6 +884,160 @@
             Lock Duration: 30 Days
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-modal-overlay" id="makeDepositModal">
+    <div class="custom-modal">
+      <div class="modal-header">
+        <h1 class="modal-title">Deposit</h1>
+        <button class="close-modal">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8.5L8 16.5M16 16.5L8 8.5" stroke="white" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body withdrawal-body">
+        <div class="modal-deposit-text modal-label">Choose a currency</div>
+        <div class="dropdown-wrapper">
+            <button class="dropdown-toggle withdrawal-toggle" id="selectedCurrency">
+              <span class="dropFlex">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6"></circle>
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434"></path>
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C"></path>
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B"></path>
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C"></path>
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414"></path>
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939"></path>
+                </svg>
+                <span class="dropdown-wrapper-span">Etherium <span class="op05">(ETH)</span></span>
+              </span>
+              <div>
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10.5L12.0008 15.08L17 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+            <ul class="dropdown-menu">
+              <li data-token="ETH">
+              <span class="dropFlex">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6"></circle>
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434"></path>
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C"></path>
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B"></path>
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C"></path>
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414"></path>
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939"></path>
+                </svg>
+                <span class="dropdown-wrapper-span">Etherium <span class="op05">(ETH)</span></span>
+              </span>
+              </li>
+              <li data-token="BTC">
+                              <span class="dropFlex">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6"></circle>
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434"></path>
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C"></path>
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B"></path>
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C"></path>
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414"></path>
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939"></path>
+                </svg>
+                <span class="dropdown-wrapper-span">Etherium <span class="op05">(ETH)</span></span>
+              </span>
+              </li>
+              <li data-token="LTC">
+                              <span class="dropFlex">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12.5" r="12" fill="#F6F6F6"></circle>
+                  <path d="M11.9997 4.78516L11.8936 5.13676V15.3385L11.9997 15.4417L16.8547 12.6426L11.9997 4.78516Z" fill="#343434"></path>
+                  <path d="M11.9987 4.78516L7.14355 12.6426L11.9987 15.4417V10.4901V4.78516Z" fill="#8C8C8C"></path>
+                  <path d="M11.9998 16.3387L11.9399 16.4099V20.0439L11.9998 20.2142L16.8577 13.541L11.9998 16.3387Z" fill="#3C3C3B"></path>
+                  <path d="M11.9987 20.2142V16.3387L7.14355 13.541L11.9987 20.2142Z" fill="#8C8C8C"></path>
+                  <path d="M11.9976 15.4419L16.8526 12.6427L11.9976 10.4902V15.4419Z" fill="#141414"></path>
+                  <path d="M7.14355 12.6427L11.9987 15.4419V10.4902L7.14355 12.6427Z" fill="#393939"></path>
+                </svg>
+                <span class="dropdown-wrapper-span">Etherium <span class="op05">(ETH)</span></span>
+              </span>
+              </li>
+            </ul>
+        </div>
+        <div class="modal-deposit-text modal-label mt20">Choose a network</div>
+        <div class="dropdown-wrapper">
+            <button class="dropdown-toggle withdrawal-toggle" id="selectedNetwork">    
+              <div class="dropFlex">
+                <div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.0115 7.45313L6.85292 7.45312C5.67327 7.45312 4.53155 7.91648 3.6943 8.76613C2.85705 9.61577 2.38138 10.755 2.40046 11.9715C2.38133 13.188 2.85719 14.3274 3.6943 15.1769C4.55051 16.0458 5.65413 16.5093 6.83382 16.5093H9.9924M13.9883 16.5479H17.1469C18.3265 16.5479 19.4683 16.0845 20.3055 15.2349C21.1428 14.3852 21.6184 13.246 21.5993 12.0295C21.5993 10.8324 21.1237 9.69311 20.2864 8.84347C19.4492 7.99382 18.3266 7.51111 17.1469 7.51109H13.9883M7.25235 11.9583L16.7281 11.9583" stroke="#248DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>      
+              <span class="dropdown-wrapper-span">ERC20</span>
+              </div>
+              <div>
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10.5L12.0008 15.08L17 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+            <ul class="dropdown-menu">
+              <li data-token="ERC20">
+                <span class="dropdown-wrapper-span">ERC20</span>
+              </li>
+              <li data-token="TRC20">
+                <span class="dropdown-wrapper-span">TRC20</span>
+              </li>
+              <li data-token="TRC20">
+                <span class="dropdown-wrapper-span">TRC20</span>
+              </li>
+            </ul>
+        </div>
+        <div class="modal-deposit-text modal-label mt20">Deposit amount</div>
+        <input class="withdrawal-input withdrawal-input2 mb-0" placeholder="Min 0.01 ETH">
+        <div class="modal-deposit-container">
+          <div class="modal-deposit-text">1200 PTS</div>
+        </div>
+        <button class="modal-btn main-btn mb-0 advance-btn">Make a deposit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-modal-overlay" id="loadingModal">
+    <div class="custom-modal">
+      <div class="modal-header loading-column">
+        <h1 class="modal-title text-center">Waite</h1>
+        <div class="modal-deposit-text modal-label">We are generating your wallet address.</div>
+      </div>
+      <div class="modal-body loading-body">
+        <img src="assets/img/loading.gif" alt="loading" class="loadingGif">
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-modal-overlay" id="resultModal">
+    <div class="custom-modal">
+      <div class="modal-header loading-column">
+        <h1 class="modal-title text-center">Nice</h1>
+      </div>
+      <div class="modal-body result-body">
+        <div class="modal-deposit-text modal-label">Your Deposit Address</div>
+        <div class="dep-container copy-block">
+              <div class="dep-text">0x742d35Cc6635C0532925a3b8D4034DfcD25dB02</div>
+              <div class="svg-copy">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.5 13.1251L20.5 6.00003C20.5 4.34317 19.1568 3.00002 17.5 3.00003L10.375 3.00012M14.5 21.0001L7.75 21.0001C6.50736 21.0001 5.5 19.9928 5.5 18.7501L5.5 9.00012C5.5 7.75747 6.50736 6.75011 7.75 6.75011L14.5 6.75011C15.7426 6.75011 16.75 7.75747 16.75 9.00011L16.75 18.7501C16.75 19.9928 15.7426 21.0001 14.5 21.0001Z" stroke="#248DFF" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+              </div>
+        </div>
+        <div class="modal-deposit-text modal-label text-center mt-1">
+          Send only ETH to this address. <br>
+          Other tokens will be lost
+        </div>
+        <button class="main-btn comming-soon-btn resultModalBtn">
+          I sent the money
+        </button>
       </div>
     </div>
   </div>

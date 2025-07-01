@@ -55,25 +55,131 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownToggle = document.querySelector(".dropdown-toggle");
   const dropdownMenu = document.querySelector(".dropdown-menu");
-  const selectedToken = document.querySelector("#selectedToken span");
+  const selectedToken = document.querySelector("#selectedToken .dropdown-wrapper-span");
 
+  if (!dropdownToggle || !dropdownMenu || !selectedToken) return;
+
+  // Открытие/закрытие dropdown
   dropdownToggle.addEventListener("click", (e) => {
     e.stopPropagation();
-    dropdownMenu.style.display =
-      dropdownMenu.style.display === "block" ? "none" : "block";
+    const isOpen = dropdownMenu.style.display === "block";
+    document.querySelectorAll(".dropdown-menu").forEach(menu => menu.style.display = "none");
+    dropdownMenu.style.display = isOpen ? "none" : "block";
   });
 
-  document.querySelectorAll(".dropdown-menu li").forEach((item) => {
+  // Выбор токена
+  dropdownMenu.querySelectorAll("li").forEach((item) => {
     item.addEventListener("click", () => {
-      selectedToken.textContent = item.dataset.token;
+      // Вставляем HTML содержимое li внутрь кнопки
+      selectedToken.innerHTML = item.innerHTML;
+
+      // Можно также сохранить значение data-token в нужное место (например, data атрибут на кнопке)
+      dropdownToggle.setAttribute("data-selected-token", item.dataset.token);
+
       dropdownMenu.style.display = "none";
     });
   });
 
+  // Клик вне — закрыть меню
   document.addEventListener("click", () => {
     dropdownMenu.style.display = "none";
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  function setupDropdown(toggleSelector) {
+    const toggleBtn = document.querySelector(toggleSelector);
+    if (!toggleBtn) return;
+
+    const dropdownWrapper = toggleBtn.closest(".dropdown-wrapper");
+    const dropdownMenu = dropdownWrapper.querySelector(".dropdown-menu");
+    const valueEl = toggleBtn.querySelector(".dropdown-wrapper-span");
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = dropdownMenu.style.display === "block";
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.style.display = "none";
+      });
+      dropdownMenu.style.display = isOpen ? "none" : "block";
+    });
+
+    dropdownMenu.querySelectorAll("li").forEach((item) => {
+      item.addEventListener("click", () => {
+        valueEl.innerHTML = item.querySelector(".dropdown-wrapper-span").innerHTML;
+        toggleBtn.setAttribute("data-selected-token", item.dataset.token || "");
+        dropdownMenu.style.display = "none";
+      });
+    });
+  }
+
+  setupDropdown("#selectedCurrency");
+  setupDropdown("#selectedNetwork");
+
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown-menu").forEach(menu => {
+      menu.style.display = "none";
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modals = document.querySelectorAll(".custom-modal-overlay");
+  const withdrawalModal = document.getElementById("withdrawalModal");
+  const loadingModal = document.getElementById("loadingModal");
+  const resultModal = document.getElementById("resultModal");
+  const makeDepositModal = document.getElementById("makeDepositModal");
+
+  const advanceButtons = document.querySelectorAll(".advance-btn");
+
+  // Закрывает все модалки
+  const closeAllModals = () => {
+    modals.forEach(modal => modal.style.display = "none");
+  };
+
+  // Обработчик открытия loadingModal и resultModal
+  advanceButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      closeAllModals(); // закрыть все модалки (включая withdrawal)
+      loadingModal.style.display = "flex";
+
+      setTimeout(() => {
+        loadingModal.style.display = "none";
+        resultModal.style.display = "flex";
+      }, 3000);
+    });
+  });
+
+  // Открытие makeDepositModal (можешь привязать к любой кнопке)
+  const openDepositBtn = document.querySelector(".open-deposit-btn"); // пример
+  if (openDepositBtn) {
+    openDepositBtn.addEventListener("click", () => {
+      closeAllModals();
+      makeDepositModal.style.display = "flex";
+    });
+  }
+
+  // Кнопки закрытия модалок
+  const closeBtns = document.querySelectorAll(".close-modal");
+  closeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      closeAllModals();
+    });
+  });
+
+  // Клик вне модалки = закрыть
+  modals.forEach(modal => {
+    modal.addEventListener("click", e => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+});
+
+
+
 
 function toggleOffcanvas() {
   document.getElementById('offcanvasMenu').classList.toggle('show');

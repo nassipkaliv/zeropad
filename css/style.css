@@ -1,6 +1,6 @@
 :root {
-  --font-family: "Inter", sans-serif;
-  --second-family: "Onest", sans-serif;
+  --font-family: "Onest", sans-serif;
+  --second-family: "Inter", sans-serif;
   --third-family: "Square721TL-BoldExtended", sans-serif;
   --font3: "Brenzo Slab Personal Use", sans-serif;
   --font4: "Arial", sans-serif;
@@ -1625,6 +1625,24 @@ img {
   color: #fff;
 }
 
+.balance-text span {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.dropFlex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.op05 {
+  opacity: 0.5 !important;
+}
+
 .balance-processing {
   font-family: var(--second-family);
   font-weight: 500;
@@ -2160,6 +2178,54 @@ backdrop-filter: blur(10px);
 
 .withdrawal-input2 {
   justify-content: space-between;
+  width: 100%;
+  border: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  height: 49px;
+  outline: none;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.loading-column {
+  flex-direction: column !important;
+  gap: 5px;
+}
+
+.loadingGif {
+  width: 80px;
+}
+
+.loading-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.result-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.result-body .copy-block {
+  width: 100%;
+}
+
+.resultModalBtn {
+  width: 100% !important;
+  padding: 11px 25px;
+}
+
+.withdrawal-input::placeholder {
+  opacity: 0.5;
 }
 
 .mt20 {
