@@ -1,6 +1,6 @@
 :root {
-  --font-family: "Onest", sans-serif;
-  --second-family: "Inter", sans-serif;
+  --font-family: "Inter", sans-serif;
+  --second-family: "Onest", sans-serif;
   --third-family: "Square721TL-BoldExtended", sans-serif;
   --font3: "Brenzo Slab Personal Use", sans-serif;
   --font4: "Arial", sans-serif;
@@ -1121,7 +1121,7 @@ img {
 }
 
 .comming-soon-text {
-  font-family: var(--font-family);
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
   text-align: center;
@@ -1131,7 +1131,7 @@ img {
 
 .comming-soon-btn {
   background: rgba(36, 141, 255, 0.1);
-  font-family: var(--font-family);
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
   color: #fff;
@@ -1626,7 +1626,7 @@ img {
 }
 
 .balance-text span {
-  font-family: var(--font-family);
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 14px;
   color: #fff;
@@ -2180,7 +2180,7 @@ backdrop-filter: blur(10px);
   justify-content: space-between;
   width: 100%;
   border: 0;
-  font-family: var(--font-family);
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
   color: #fff;

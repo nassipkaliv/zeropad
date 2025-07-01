@@ -133,26 +133,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const advanceButtons = document.querySelectorAll(".advance-btn");
 
-  // Закрывает все модалки
   const closeAllModals = () => {
     modals.forEach(modal => modal.style.display = "none");
   };
 
-  // Обработчик открытия loadingModal и resultModal
   advanceButtons.forEach(button => {
     button.addEventListener("click", () => {
-      closeAllModals(); // закрыть все модалки (включая withdrawal)
+      closeAllModals(); 
       loadingModal.style.display = "flex";
 
       setTimeout(() => {
         loadingModal.style.display = "none";
         resultModal.style.display = "flex";
-      }, 3000);
+      }, 1800);
     });
   });
 
-  // Открытие makeDepositModal (можешь привязать к любой кнопке)
-  const openDepositBtn = document.querySelector(".open-deposit-btn"); // пример
+  const openDepositBtn = document.querySelector(".open-deposit-btn");
   if (openDepositBtn) {
     openDepositBtn.addEventListener("click", () => {
       closeAllModals();
@@ -160,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Кнопки закрытия модалок
   const closeBtns = document.querySelectorAll(".close-modal");
   closeBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -168,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Клик вне модалки = закрыть
   modals.forEach(modal => {
     modal.addEventListener("click", e => {
       if (e.target === modal) {
