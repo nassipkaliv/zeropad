@@ -1100,6 +1100,7 @@ img {
 
 .launchpad .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 85vh;
@@ -1116,13 +1117,40 @@ img {
   font-size: 32px;
   text-align: center;
   color: #fff;
+  margin-bottom: 5px;
 }
 
+.comming-soon-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.comming-soon-btn {
+  background: rgba(36, 141, 255, 0.1);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.comming-soon-btn:hover {
+  background: rgba(36, 141, 255, 0.2);
+  box-shadow: none;
+}
 
 .nyancat {
   bottom: 100%;
   left: 27%;
   position: absolute;
+  z-index: -1;
 }
 
 .referrals {
