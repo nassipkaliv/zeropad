@@ -2339,9 +2339,26 @@ backdrop-filter: blur(10px);
   display: none;
 }
 
+.only-mob {
+  display: none;
+}
+
+.launchpad {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .divider-text {
     font-size: 12px;
+  }
+
+  
+  .only-pc {
+    display: none;
+  }
+
+  .only-mob {
+    display: block;
   }
 
   .holders-container {
@@ -2359,10 +2376,6 @@ backdrop-filter: blur(10px);
 
   .whyus-card-title {
     font-size: 10px;
-  }
-
-  .main-btn {
-    font-size: 12px;
   }
 
   .header-center {
@@ -2388,7 +2401,7 @@ backdrop-filter: blur(10px);
   }
 
   .header-bar {
-    display: block;
+    display: flex;
   }
 
   .offcanvas {
@@ -2432,28 +2445,26 @@ backdrop-filter: blur(10px);
     width: 15%;
   }
 
-  .network-title {
-    font-size: 18px;
+  .ref-left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);   
+    gap: 10px; 
   }
 
-  .off-chain-text {
-    font-size: 12px;
-  }
+  .inv-card1 { grid-area: 1 / 1 / 2 / 2; }
+  .inv-card2 { grid-area: 1 / 2 / 2 / 3; }
+  .inv-card3 { grid-area: 2 / 1 / 3 / 2; }
+  .inv-card4 { grid-area: 2 / 2 / 3 / 3; }
 
-  .new-footer-text {
-    font-size: 12px;
-  }
-
-  .footer-social {
-    gap: 15px;
-  }
 
   .refferals-container {
     font-size: 20px;
+    text-align: center;
   }
 
   .ref-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .frog {
@@ -2470,6 +2481,11 @@ backdrop-filter: blur(10px);
 
   .invite-card {
     width: 100%;
+    flex-direction: column;
+  }
+
+  .ref-right {
+    flex-direction: column-reverse;
   }
 
   .ref-copy-content {
@@ -2477,8 +2493,10 @@ backdrop-filter: blur(10px);
   }
 
   .ref-copy-btns {
-    justify-content: start;
+    justify-content: space-between;
+    width: 100%;
   }
+
 
   .crypto-container {
     display: none;
@@ -2670,36 +2688,13 @@ backdrop-filter: blur(10px);
   }
 
   .network {
-    padding-bottom: 100px;
-  }
-
-  .refferals-container {
-    font-size: 12px;
+    padding-bottom: 170px;
   }
 
   .lvl-left {
-    gap: 10px;
-  }
-
-  .user-lvl {
-    font-size: 12px;
-    padding: 5px 8px;
-  }
-
-  .lvl-title {
-    font-size: 14px;
-  }
-
-  .lvl-subtitle {
-    font-size: 12px;
-  }
-
-  .lvl-amount {
-    font-size: 16px;
-  }
-
-  .lvl-members {
-    font-size: 12px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: start;
   }
 
   .stat-container {
@@ -2740,7 +2735,39 @@ backdrop-filter: blur(10px);
     padding: 0;
   }
 
+  .network-content {
+    padding: 16px 10px;
+  }
 
+  .copy-button {
+    width: 100%;
+  } 
+
+  .network-title {
+    font-size: 20px;
+    text-wrap: balance;
+    margin-bottom: 12px;
+  }
+
+  .comming-soon {
+    background: none;
+    padding: 0;
+    font-size: 26px;
+  }
+
+  .nyancat {
+    display: none;
+  }
+
+  .nyancatmob {
+    display: block;
+    position: absolute;
+    bottom: -10%;
+  }
+
+  .launchpad .container {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 400px) {
