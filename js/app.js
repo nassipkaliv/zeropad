@@ -13,6 +13,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+  window.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.getElementById("preloader");
+    const video = document.querySelector(".intro-video");
+
+    if (!video) {
+      preloader.style.display = "none";
+      return;
+    }
+
+    const isMobile = window.innerWidth <= 540;
+    const videoSrc = isMobile 
+      ? "assets/img/intro-video-mob.mp4" 
+      : "assets/img/intro-video.mp4";
+
+    const source = document.createElement("source");
+    source.src = videoSrc;
+    source.type = "video/mp4";
+
+    video.appendChild(source);
+
+    video.addEventListener("canplaythrough", function () {
+      preloader.style.opacity = "0";
+      preloader.style.transition = "opacity 0.5s ease";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    });
+
+    video.addEventListener("error", function () {
+      preloader.style.display = "none";
+    });
+
+    video.load();
+  });
+  
 document.addEventListener("DOMContentLoaded", () => {
   const openButtons = document.querySelectorAll("[data-target]");
   const closeButtons = document.querySelectorAll(".close-modal");
