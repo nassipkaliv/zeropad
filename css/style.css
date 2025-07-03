@@ -2331,6 +2331,14 @@ backdrop-filter: blur(10px);
   justify-content: space-between;
 }
 
+.copy-button {
+  width: 100%;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
 .crypto-swiper {
   display: none;
 }
@@ -2345,6 +2353,10 @@ backdrop-filter: blur(10px);
 
 .launchpad {
   position: relative;
+}
+
+.header-bottom {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -2402,6 +2414,30 @@ backdrop-filter: blur(10px);
 
   .header-bar {
     display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .user-account {
+    padding: 0;
+    background: none;
+  }
+
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 18px;
+  }
+
+  .header-bottom {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 12px 0;
+    padding-bottom: 0;
   }
 
   .offcanvas {
