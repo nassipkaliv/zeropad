@@ -48,44 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     video.load();
   });
   
-document.addEventListener("DOMContentLoaded", () => {
-  const openButtons = document.querySelectorAll("[data-target]");
-  const closeButtons = document.querySelectorAll(".close-modal");
-
-  openButtons.forEach(btn => {
-    const targetSelector = btn.getAttribute("data-target");
-    const modal = document.querySelector(targetSelector);
-
-    if (!modal) return;
-
-    btn.addEventListener("click", () => {
-      modal.classList.add("show");
-    });
-
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.remove("show");
-      }
-    });
-  });
-
-  closeButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const modal = btn.closest(".custom-modal-overlay");
-      if (modal) modal.classList.remove("show");
-    });
-  });
-});
-
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    document.querySelectorAll(".custom-modal-overlay.show").forEach(modal => {
-      modal.classList.remove("show");
-    });
-  }
-});
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownToggle = document.querySelector(".dropdown-toggle");
@@ -166,48 +128,75 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultModal = document.getElementById("resultModal");
   const makeDepositModal = document.getElementById("makeDepositModal");
 
+  const openButtons = document.querySelectorAll("[data-target]");
   const advanceButtons = document.querySelectorAll(".advance-btn");
+  const closeButtons = document.querySelectorAll(".close-modal");
+  const openDepositBtn = document.querySelector(".open-deposit-btn");
+
+  const hideModal = (modal) => {
+    if (!modal.classList.contains("show")) return;
+    modal.classList.add("fade-out");
+
+    setTimeout(() => {
+      modal.classList.remove("fade-out", "show");
+    }, 300); // должно совпадать с transition: 0.3s
+  };
 
   const closeAllModals = () => {
-    modals.forEach(modal => modal.style.display = "none");
+    modals.forEach(hideModal);
   };
+
+  openButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetSelector = btn.getAttribute("data-target");
+      const modal = document.querySelector(targetSelector);
+      if (modal) {
+        closeAllModals();
+        modal.classList.add("show");
+      }
+    });
+  });
+
+  if (openDepositBtn) {
+    openDepositBtn.addEventListener("click", () => {
+      closeAllModals();
+      makeDepositModal.classList.add("show");
+    });
+  }
 
   advanceButtons.forEach(button => {
     button.addEventListener("click", () => {
-      closeAllModals(); 
-      loadingModal.style.display = "flex";
+      closeAllModals();
+      loadingModal.classList.add("show");
 
       setTimeout(() => {
-        loadingModal.style.display = "none";
-        resultModal.style.display = "flex";
+        hideModal(loadingModal);
+        resultModal.classList.add("show");
       }, 1800);
     });
   });
 
-  const openDepositBtn = document.querySelector(".open-deposit-btn");
-  if (openDepositBtn) {
-    openDepositBtn.addEventListener("click", () => {
-      closeAllModals();
-      makeDepositModal.style.display = "flex";
-    });
-  }
-
-  const closeBtns = document.querySelectorAll(".close-modal");
-  closeBtns.forEach(btn => {
+  closeButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-      closeAllModals();
+      const modal = btn.closest(".custom-modal-overlay");
+      if (modal) hideModal(modal);
     });
   });
 
   modals.forEach(modal => {
-    modal.addEventListener("click", e => {
+    modal.addEventListener("click", (e) => {
       if (e.target === modal) {
-        modal.style.display = "none";
+        hideModal(modal);
       }
     });
   });
-});
 
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeAllModals();
+    }
+  });
+});
 
 
 

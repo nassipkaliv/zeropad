@@ -1976,17 +1976,19 @@ img {
   background: rgba(0, 0, 0, 0.7);
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .custom-modal-overlay.show {
   display: flex;
-  animation: fadeIn 0.3s ease;
+  opacity: 1;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.custom-modal-overlay.fade-out {
+  opacity: 0;
 }
+
 
 .custom-modal {
   background:
