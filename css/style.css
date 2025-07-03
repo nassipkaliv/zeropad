@@ -1580,7 +1580,6 @@ img {
   display: flex;
   align-self: stretch;
   gap: 20px;
-  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -1672,9 +1671,9 @@ img {
 .balance-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  margin-bottom: 30px;
 }
 
 .balance-subtitle {
@@ -1784,6 +1783,7 @@ img {
   display: flex;
   align-items: center;
   flex: 1;
+  gap: 8px;
 }
 
 .table-td-text {
@@ -2468,11 +2468,17 @@ backdrop-filter: blur(10px);
   }
 
   .frog {
-    height: 100%;
+    height: 51px;
+    top: auto;
+    bottom: 0;
+    border-radius: 20px;
   }
 
   .bean2 {
-    height: 100%;
+    height: 51px;
+    top: auto;
+    bottom: 0;
+    border-radius: 0 0px 20px 0;
   }
 
   .copy-text {
@@ -2503,61 +2509,38 @@ backdrop-filter: blur(10px);
   }
 
   .crypto-swiper {
-    display: flex;
+    display: none;
   }
 
   .exchange-container {
     flex-direction: column;
+    margin-top: 0;
   }
 
   .withdrawal-btn {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
-  .table-header-text, .table-td-text {
-    font-size: 12px;
-  }
-
-  .table-td-status {
-    padding: 5px 8px;
-    font-size: 10px;
-  }
-
-  .stat-title {
-    font-size: 18px;
-  }
-
-  .stat-text, .dep-text {
-    font-size: 12px;
-  }
-
-  .balance-text {
+  .stat-text {
     font-size: 14px;
   }
-
-  .stat-subtitle {
-    font-size: 12px;
-  }
-
 
   .exchange-block {
     justify-content: space-between;
   }
 
-  .dep-subtitle {
-    font-size: 12px;
-  }
-
-  .stat-info-text {
-    font-size: 12px;
-  }
 
   .exchange {
-    padding-bottom: 70px;
+    padding-top: 20px;
+    padding-bottom: 120px;
   }
 
   .whyus-container {
     display: none;
+  }
+
+  .balance-subtitle {
+    font-size: 14px;
   }
 
   .mem {
@@ -2648,6 +2631,10 @@ backdrop-filter: blur(10px);
     transform: rotate(351deg);
   }
 
+  .table-header-text, .table-td {
+    width: 150px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -2698,7 +2685,10 @@ backdrop-filter: blur(10px);
   }
 
   .stat-container {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
   }
 
   .stat-info {
