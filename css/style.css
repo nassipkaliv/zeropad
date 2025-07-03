@@ -2135,6 +2135,10 @@ img {
   margin-left: 4px;
 }
 
+.drop-menu {
+  min-width: 120px !important;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -2145,7 +2149,7 @@ img {
   list-style: none;
   padding: 0.5rem 0;
   display: none;
-  min-width: 120px;
+  min-width: 335px;
   z-index: 10;
 }
 
@@ -2356,6 +2360,10 @@ backdrop-filter: blur(10px);
 }
 
 .header-bottom {
+  display: none;
+}
+
+.nyancatmob {
   display: none;
 }
 
